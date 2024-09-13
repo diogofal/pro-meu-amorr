@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title> minha gatona </title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      </head>
+    <style>
+        body {
+  font-family: roboto;
+  background-color: #FFC0CB;
+}
+
+
+a {
+  color: #fff;
+}
+
+/* header */
+
+.header {
+  background-color: #FF69B4;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  width: 100%;
+  height: 13%;
+  z-index: 3;
+  position: fixed;
+  font-family: roboto;
+  
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: 	#FF69B4;
+  font-size: 18px;
+  
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .logo:hover,
+.header .menu-btn:hover {
+  color: 		#8B008B;
+  transition: 0.5s;
+  font-family: roboto;
+
+  
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 0.75% 5%;
+  text-decoration: none;
+  margin-top: 2.5%;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  margin-top: 2%;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 4px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 30px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 8px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -8px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+    margin-top: 10%;
+  }
+  .header .logo {
+    margin-top: 1%;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  margin-left: 5%;
+}
+
+.voltar {
+    margin-left: 3.75%;
+}
+
+.voltar:hover img{
+    transform: scale(1.1);
+    transition: transform .5s ease; 
+    
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    margin-left: 5%;
+    float: left;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+h2 {
+  max-width: 40%;
+  display: inline-block;
+  color: white;
+  margin-left: 3%;
+  float: left;
+  font-size: 22px;
+  
+}
+
+.separacao {
+  position: absolute;
+  
+}
+
+@media (max-width: 700px) {
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+
+  h2 {
+    font-size: 17px;
+    max-width: 50%;
+    text-align: justify;
+  }
+
+  .corinthians {
+    font-size: 16px;
+  }
+}
+
+
+
+</style>
+<body>
+    <header class="header">
+        <a href="ABREISSODAQUI.html" class="logo">For My Lover</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="nois.html">Eu e você</a></li>
+            <li><a href="voce.html">Meu amor</a></li>
+            <li><a href="musicas.html">Músicas</a></li>
+        </ul>
+    </header> <br><br><br><br><br>
+    <h1> Tudo que eu amo em você: </h1> <br>
+
+        <img class="img" src="imagens/oios.png">
+        <h2> vamo começar pelos seu olhinhos ne amor <p> os olhinhos que que eu sou completamente apaixonado e que brilham mais que qualquer estrela no universo!!</p><p> seus olhos ta no meu top3 coisas mais fodonas em vc, meu bem!</p></h2>
+        <br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br>
+
+
+        <img class="img" src="imagens/sorriso.png">
+        <h2> O SORRISO MAIS PERFEITO DO MUNDO!!!!! <p> eu sou 100% viciado no seu sorriso, eu sou mt apaixonado em sorriso</p> <p> (quando eu ainda n namorava) o sorriso era smp a primeira coisa que eu reparava em alguem e o so >seu< que meu conquistou, ate pq, afinal, ele é uma obra de arte</p></h2>
+      <br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br>
+
+      <img class="img" src="imagens/nariz.png">
+        <h2> agora vamo falar desse seu narizinho todo bonitao! <p> normalmente eu n elogio tanto ele, mas saiba que eu amo mt mt mt ele!! gosto mt todo o formatinho dele e sou completamente louquinho nele!! todo lindao, minha princesa! vc de perfil é a mulher mais linda do mundo, fica taaaaaao gatona</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+
+      <img class="img" src="imagens/corpinho.png">
+        <h2> ãn o que falar desse seu corpo ein amor, amo tanto (essa ft é a unica que mostra seu corpo, nao ta mt boa a qualidade eita)<p> eu me perco nas suas curvas, é tudo tao lindo que ate me falta palavra aqui</p><p> de vez em quando eu n me conformo que existe uma mulher tao perfeitinha assim como vc</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+
+      <img class="img" src="imagens/cabelo.png">
+        <h2> essa foto é mt boa, seu cabelo todo sujo KKKKKKKKKKKKK<p> mas voce sabe o quanto eu amo os nossos cachinhos, sao tao perfeitinhos</p> <p> mas n so os cachinhos, voce de cabelo liso fica a mulher mais linda do mundo tb, seu cabelo é bonitao de todos os jeitos!</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <img class="img" src="imagens/idolo.png">
+        <h2> EU NAO PODIA ESQUECER DO MEU IDOLO NE PLMDS (pq ele veio junto cm vc, ent ele tera um espaço aq sim!!) <p> EU TE AMO ROCK VC É MUITO FODA QUERO TE CONHECER LOGO VC É PERFEITO ZERO ERROS LINDO MARAVILHOSO CHEIROSO (nunca cheirei) E TODO FODAO</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <img class="img" src="imagens/aleatorio.png">
+        <h2> isso aq nao é algo necessariamente estetico amor, MAS EU AMO TANTO QUANDO VC PEGA MEU CELULAR PRA FICAR TIRANDO FT SUA OU NSS PPRT MEU DEUS <p> eu fico genuinamente feliz quando vc faz isso, fico todo viadao, te amo muito amor</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <img class="img" src="imagens/corinthians.png">
+        <h2 class="corinthians">EU TO ESCREVENDO ISSO NA QUARTA, NO DIA QUE O CORINTHIANS PASSOU DO JUVENTUDE ENT VAI TER MT EMOÇÃO AQ <p> EU AMO PRA CARALHO O TIME QUE VC TORCE (QUE É O CORINTHIANS, COMO VIMOS NA FOTO) VAMOOOOOO CARALHO EU TO EM EXTASE TE AMO CORINTHIANS</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <img class="img" src="imagens/timido.png">
+        <h2> (so pra deixar claro que nao achei uma foto melhor de vc com timido, aceite isso)<p> mas eu aaaaamo quando vc fica com timido quando eu te elogio, vc fica tao lindona, é so mais um estimulo pra eu elogiar mais, é o ciclo de felicidade infinita</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <img class="img" src="imagens/unha.png">
+        <h2> ãn pq sera que eu qria uma foto da sua unha ein rs<p> i like so much de unha, acho mt foda pprt. eu fiquei genuinamente feliz quando vc pintou a sua, eu acho mt mt mt lindo</p> <p> e a sua ta toda perfeitinha, vermelho combina mt cm vc e vc usa o formato de unha que eu mais gosto ainda!!</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <img class="img" src="imagens/sem oculos.png">
+        <h2> VOCE SEM OCULOS SENDO SIMPLESMENTE A MULHER MAIS LINDA DO MUNDO<p> impressionante o quao gata vc fica sem oculos pqp meu amor, vc é tao linda de tds os jeitos, nao me aguento nao</p><p> seu rostinho é tao lindo, minha vida, vc é toda incrivel ne</p></h2>
+      </div> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br> <br>
+
+      <a href="ABREISSODAQUI.html" class="voltar">
+        <img clas="voltar" src="imagens/seta.png" width="250" height="218">
+      </a>
+
+      
+</body>
