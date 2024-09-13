@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title> musicas </title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      </head>
+    <style>
+
+body {
+  font-family: roboto;
+  background-color: #FFC0CB;
+}
+
+
+a {
+  color: #fff;
+}
+
+/* header */
+
+.header {
+  background-color: #FF69B4;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  width: 100%;
+  height: 13%;
+  z-index: 3;
+  position: fixed;
+  font-family: roboto;
+  
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: 	#FF69B4;
+  font-size: 18px;
+  
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .logo:hover,
+.header .menu-btn:hover {
+  color: 		#8B008B;
+  transition: 0.5s;
+  font-family: roboto;
+
+  
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 0.75% 5%;
+  text-decoration: none;
+  margin-top: 2.5%;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  margin-top: 2%;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 4px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 30px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 8px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -8px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+    margin-top: 10%;
+  }
+  .header .logo {
+    margin-top: 1%;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+.img {
+    width: 300px;
+    height: 300px;
+}
+
+.descricao {
+    width: 300px;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 5px;
+    color: white
+}
+
+.duracao {
+    width: 300px;
+    margin-top: 25px;
+}
+
+.barra {
+    width: 300px;
+    height: 6px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+progress {
+    height: 6px;
+    width: 0%;
+    background-color: #333;
+}
+
+.ponto {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.tempo {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 4%;
+    color: white;
+}
+
+.player {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.botao-play, .botao-pause {
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+.setas {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+.botao-pause {
+    display: none;
+}
+
+h1 {
+  margin-left: 5%;
+  color: white;
+  font-family: roboto;
+}
+
+.borda {
+  border-width: 2px; 
+  border-style: solid; 
+  border-color:  white;
+  width: 25%;
+  background-color:		#1C1C1C;
+}
+
+.voltar {
+    margin-left: 3.75%;
+}
+
+.voltar:hover img{
+    transform: scale(1.1);
+    transition: transform .5s ease; 
+    
+}
+
+
+
+
+    </style>
+    <header class="header">
+        <a href="ABREISSODAQUI.html" class="logo">For My Lover</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="nois.html">Eu e você</a></li>
+            <li><a href="voce.html">Meu amor</a></li>
+            <li><a href="musicas.html">Músicas</a></li>
+        </ul>
+    </header> <br><br><br><br><br>
+
+    <h1> Suas músicas, meu amor:</h1> <br><br>
+
+    <center><div class="borda"> <br>
+    <img class="img" src="imagens/Cheia de Vida.png">
+    <div class="descricao">
+        <h2>Cheia de Vida</h2>
+        <i>Charlie Brown Jr</i>
+    </div>
+    <div class="duracao">
+        <div class="barra">
+            <progress value="0" max="1"></progress>
+            <div class="ponto"></div>
+        </div>
+        <div class="tempo">
+            <p class="inicio">0:00</p>
+            <p class="fim">2:42</p>
+        </div>
+    </div>
+    <div class="player">
+        <i class="fas fa-step-backward setas anterior"></i>
+        <i class="fas fa-play-circle botao-play"></i>
+        <i class="fas fa-pause-circle botao-pause"></i>
+        <i class="fas fa-step-forward setas proximo"></i>
+    </div> <br>
+    <audio src="music/Cheia de Vida.mp3"></audio>
+    </div> <br>
+  </center>
+
+  <a href="ABREISSODAQUI.html" class="voltar">
+    <img src="imagens/seta.png" width="250" height="218">
+  </a>
+
+    <script src="script.js"></script>
