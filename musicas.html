@@ -197,12 +197,12 @@ h2 {
 }
 
 .duracao {
-    width: 200px;
+    width: 300px;
     margin-top: 25px;
 }
 
 .barra {
-    width: 200px;
+    width: 300px;
     height: 6px;
     border: 1px solid #eee;
     border-radius: 5px;
@@ -227,14 +227,14 @@ progress {
 
 .tempo {
     display: flex;
-    width: 200px;
+    width: 300px;
     justify-content: space-between;
     margin-top: 4%;
     color: white;
 }
 
 .player {
-    width: 200px;
+    width: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -242,13 +242,13 @@ progress {
 }
 
 .botao-play, .botao-pause {
-    font-size: 45px;
+    font-size: 50px;
     cursor: pointer;
     color: white;
 }
 
 .setas {
-    font-size: 35px;
+    font-size: 40px;
     cursor: pointer;
     color: white;
 }
@@ -268,7 +268,7 @@ h1 {
   border-style: solid; 
   border-color:  white;
   width: 400px;
-  background-color:		#1C1C1C;
+  background-color:	#1C1C1C;
 }
 
 .voltar {
@@ -283,8 +283,17 @@ h1 {
 
 @media (min-width: 48em) {
   .borda{
-    width: 250px;
+    max-width: 250px;
   }
+
+    .duracao,
+    .barra,
+    .tempo,
+    .player {
+        width: 200px;
+    }
+    
+    
 
 
 
