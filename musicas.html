@@ -189,22 +189,22 @@ body {
 
 .descricao {
     width: 200px;
-    color: white;
+    color: black;
 }
 
 h2 {
-    color: white
+    color: black
 }
 
 .duracao {
-    width: 300px;
+    width: 200px;
     margin-top: 25px;
 }
 
 .barra {
-    width: 300px;
+    width: 200px;
     height: 6px;
-    border: 1px solid #eee;
+    border: 1px solid black;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -220,21 +220,21 @@ progress {
 .ponto {
     width: 20px;
     height: 20px;
-    background-color: #eee;
+    background-color: black;
     border-radius: 50%;
     margin-left: -10px;
 }
 
 .tempo {
     display: flex;
-    width: 300px;
+    width: 200px;
     justify-content: space-between;
     margin-top: 4%;
-    color: white;
+    color: black;
 }
 
 .player {
-    width: 300px;
+    width: 200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -244,13 +244,13 @@ progress {
 .botao-play, .botao-pause {
     font-size: 50px;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 .setas {
     font-size: 40px;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 .botao-pause {
@@ -263,14 +263,7 @@ h1 {
   font-family: roboto;
 }
 
-.borda {
-  border-width: 2px; 
-  border-style: solid; 
-  border-color:  white;
-  width: 400px;
-  background-color:	#1C1C1C;
-  position: absolute;
-}
+
 
 .voltar {
     margin-left: 3.75%;
@@ -281,23 +274,6 @@ h1 {
     transition: transform .5s ease; 
     
 }
-
-@media (min-width: 48em) {
-  .borda{
-    width: 250px;
-  }
-
-    .duracao,
-    .barra,
-    .tempo,
-    .player {
-        width: 200px;
-    }
-    
-    
-
-
-
 
     </style>
     <header class="header">
@@ -313,7 +289,7 @@ h1 {
 
     <h1> Suas músicas, meu amor:</h1> <br><br>
 
-    <center><div class="borda"> <br>
+    <center> 
     <img class="img" src="Cheia de Vida.png">
     <div class="descricao">
         <h2>Cheia de Vida</h2>
@@ -336,7 +312,7 @@ h1 {
         <i class="fas fa-step-forward setas proximo"></i>
     </div> <br>
     <audio src="Cheia de Vida.mp3"></audio>
-    </div> <br>
+ <br>
   </center>
 
   <a href="ABREISSODAQUI.html" class="voltar">
